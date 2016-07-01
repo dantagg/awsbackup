@@ -3,7 +3,7 @@
 Between each item in the list. The IAM policy needs to be set up so it is the minimum required to deliver that
 functionality
 
-1. Create the backup bucket
+1. ~~Create the backup bucket~~
 awsbackup create --bucket mybucket
 1. Add authentication details
 2. Create the user with the policy to back up to the backup bucket
@@ -16,3 +16,5 @@ awsbackup create --bucket mybucket
     i. list buckets
     ii. delete files
     iii. delete buckets
+
+
