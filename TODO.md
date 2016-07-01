@@ -4,7 +4,7 @@ Between each item in the list. The IAM policy needs to be set up so it is the mi
 functionality
 
 1. ~~Create the backup bucket~~
-awsbackup create --bucket mybucket
+ `awsbackup create --bucket mybucket`
 1. Add authentication details
 2. Create the user with the policy to back up to the backup bucket
 3. Create the backup script that the user uses to back up to the backup bucket
