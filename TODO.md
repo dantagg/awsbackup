@@ -5,8 +5,12 @@ functionality
 
 1. ~~Create the backup bucket~~<br>
  `awsbackup create --bucket mybucket`
-1. Add authentication details
-2. Create the user with the policy to back up to the backup bucket
+2. ~~Add authentication details~~ <br>
+  `awsbackup --profile myprofile --bucket backupmybucket`
+3. ~~Create the User with the permissions to backup to the bucket and the credentials to sign in~~ <br>
+  `awsbackup --profile myprofile --bucket backupmybucket --user backupmyuser`
+4. Create a user that can assume the role to backup
+
 3. Create the backup script that the user uses to back up to the backup bucket
 4. Change backup bucket creation to be a versioning bucket
 5. Create versioning policy and apply it ot bucket
