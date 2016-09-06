@@ -6,15 +6,22 @@ functionality
 1. ~~Create the backup bucket~~<br>
  `awsbackup create --bucket mybucket`
 2. ~~Add authentication details~~ <br>
-  `awsbackup --profile myprofile --bucket backupmybucket`
+  `awsbackup --profile myprofile create --bucket backupmybucket`
 3. ~~Create the User with the permissions to backup to the bucket and the credentials to sign in~~ <br>
-  `awsbackup --profile myprofile --bucket backupmybucket --user backupmyuser`
+  `awsbackup --profile myprofile create --bucket backupmybucket --user backupmyuser --file mycredentialfile`
 
-3. Create the backup script that the user uses to back up to the backup bucket
+3. Export the backup script that the user uses to back up to the backup bucket <br>
+Need to include commented postfres and mysql dump scripts commented out
+  `awsbackup syncscript --bucket backupmybucket --from directory --name scriptname`
+
 4. Change backup bucket creation to be a versioning bucket
+
 5. Create versioning policy and apply it ot bucket
+
 6. Create weekly backup with versioning, policy and script
+
 7. Create monthly backup with versioning, policy and script
+
 8. Test whether server identity can
     i. list buckets
     ii. delete files
